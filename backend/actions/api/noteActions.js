@@ -32,7 +32,6 @@ class NoteActions {
       //dodaje return by to co jest później się nie wykonało,nie moge dwa raazy wysłać nagłówka
       return res.status(500).json({ message: err.message });
     }
-    console.log(doc);
     res.status(200).json(doc);
   }
   async getNote(req, res) {

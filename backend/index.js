@@ -3,6 +3,8 @@ const app = express();
 const { port } = require("./config");
 const apiRouter = require("./routes/api");
 const bodyParser = require("body-parser");
+const cors = require("cors");
+app.use(cors());
 //baza danych
 require("./database/mongoose");
 
@@ -18,6 +20,8 @@ app.use("/api", apiRouter);
 
 //serwer ma słuchać połączen przychodzących na porcie 3000, w momencie gdy
 //serwer zacznie słuchać konsoluje sobie
+
+//cors fix
 
 //serwer
 app.listen(port, () => {
